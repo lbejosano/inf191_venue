@@ -1,6 +1,6 @@
 # Informatics 191 Capstone Project
-Course: UCI Senior Capstone Project 
-Team: Prestige Worldwide
+Course: UCI Senior Capstone Project  
+Team: Prestige Worldwide  
 Project: Rockwell Collins Venue™ Cabin Management System
 
 ## About the Project
