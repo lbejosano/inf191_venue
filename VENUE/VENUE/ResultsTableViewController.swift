@@ -65,7 +65,11 @@ class ResultsTableViewController: UITableViewController {
             }
         }
         
-        self.performSegue(withIdentifier: "toSettings", sender: self)
+        for button in settingsButtons {
+            if currentCell.tableLabel.text == button {
+                self.performSegue(withIdentifier: "toSettings", sender: self)
+            }
+        }
         
     }
     
