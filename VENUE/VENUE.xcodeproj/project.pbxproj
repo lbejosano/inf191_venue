@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65F4076B1EEDEC300032EF7A /* voiceCommandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4076A1EEDEC300032EF7A /* voiceCommandController.swift */; };
+		65F4076D1EEDEC3F0032EF7A /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4076C1EEDEC3F0032EF7A /* ResultsTableViewController.swift */; };
+		65F4076F1EEDEC4C0032EF7A /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4076E1EEDEC4C0032EF7A /* ResultsTableViewCell.swift */; };
+		65F407711EEDEC560032EF7A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F407701EEDEC560032EF7A /* Result.swift */; };
 		ED2564281EE8AB6D00129FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2564271EE8AB6D00129FEB /* AppDelegate.swift */; };
 		ED25642A1EE8AB6D00129FEB /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2564291EE8AB6D00129FEB /* MainPageViewController.swift */; };
 		ED25642D1EE8AB6D00129FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED25642B1EE8AB6D00129FEB /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65F4076A1EEDEC300032EF7A /* voiceCommandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = voiceCommandController.swift; sourceTree = "<group>"; };
+		65F4076C1EEDEC3F0032EF7A /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		65F4076E1EEDEC4C0032EF7A /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		65F407701EEDEC560032EF7A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		ED2564241EE8AB6D00129FEB /* VENUE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VENUE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2564271EE8AB6D00129FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED2564291EE8AB6D00129FEB /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				ED25642E1EE8AB6D00129FEB /* Assets.xcassets */,
 				ED2564301EE8AB6D00129FEB /* LaunchScreen.storyboard */,
 				ED2564331EE8AB6D00129FEB /* Info.plist */,
+				65F4076A1EEDEC300032EF7A /* voiceCommandController.swift */,
+				65F4076C1EEDEC3F0032EF7A /* ResultsTableViewController.swift */,
+				65F4076E1EEDEC4C0032EF7A /* ResultsTableViewCell.swift */,
+				65F407701EEDEC560032EF7A /* Result.swift */,
 			);
 			path = VENUE;
 			sourceTree = "<group>";
@@ -204,9 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F4076B1EEDEC300032EF7A /* voiceCommandController.swift in Sources */,
 				ED25642A1EE8AB6D00129FEB /* MainPageViewController.swift in Sources */,
+				65F4076F1EEDEC4C0032EF7A /* ResultsTableViewCell.swift in Sources */,
 				ED2564281EE8AB6D00129FEB /* AppDelegate.swift in Sources */,
+				65F407711EEDEC560032EF7A /* Result.swift in Sources */,
 				ED25644A1EEDDB7800129FEB /* SettingsViewController.swift in Sources */,
+				65F4076D1EEDEC3F0032EF7A /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X65RG2AQQU;
 				INFOPLIST_FILE = VENUE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Prestige-Worldwide.VENUE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X65RG2AQQU;
 				INFOPLIST_FILE = VENUE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Prestige-Worldwide.VENUE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +436,7 @@
 				ED2564431EE8AB6D00129FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED2564441EE8AB6D00129FEB /* Build configuration list for PBXNativeTarget "VENUETests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +445,7 @@
 				ED2564461EE8AB6D00129FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

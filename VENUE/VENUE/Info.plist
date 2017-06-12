@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Your microphone will be used to record your speech when you press the &quot;Voice Command&quot; button.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Your microphone will be used for this application</string>
 </dict>
 </plist>

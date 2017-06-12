@@ -3,8 +3,15 @@
 //  VENUE
 
 import UIKit
+import Speech
 
 class MainPageViewController: UIViewController {
+    
+    var homebuttons = [String](arrayLiteral: "Media Client","Flight Info","Cabin Controls","Indirect Lights On",
+                               "Indirect Lights Off","Silent Cabin","Cabin Wake","Cabin Sleep",
+                               "Dark Cabin","Watch Airshow","Watch Blue Ray","Watch HD",
+                               "Theater Blue Ray","Theater 1","Voice Command","Application Settings")
+    
     //Cabin Remote:
     
     @IBOutlet weak var MediaClientButton: UIButton!
@@ -51,6 +58,14 @@ class MainPageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "voicecommand" {
+            if let destinationViewController = segue.destination as? voiceCommandController {
+                destinationViewController.voicebuttons = homebuttons
+            }
+        }
     }
 
 

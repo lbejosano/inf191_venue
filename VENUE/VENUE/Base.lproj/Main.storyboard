@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cge-9d-yX9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cge-9d-yX9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,6 +135,9 @@
                                 <rect key="frame" x="303" y="630" width="21" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="btn_voice_cmd"/>
+                                <connections>
+                                    <segue destination="Po9-nA-6xh" kind="show" id="iwK-Z0-OR1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-fj-DKr">
                                 <rect key="frame" x="18" y="175" width="86" height="21"/>
@@ -248,6 +251,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4lN-Xb-5xt"/>
                     <connections>
                         <outlet property="aboutAppButton" destination="9Av-bN-hJh" id="nzH-EE-ggb"/>
                         <outlet property="appPrefButton" destination="iFT-hm-TBq" id="tCb-2x-jMR"/>
@@ -257,6 +261,120 @@
             </objects>
             <point key="canvasLocation" x="1853.5999999999999" y="136.28185907046478"/>
         </scene>
+        <!--Voice Command Controller-->
+        <scene sceneID="YZH-Ze-bpi">
+            <objects>
+                <viewController id="Po9-nA-6xh" customClass="voiceCommandController" customModule="VENUE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OIZ-SF-i5b"/>
+                        <viewControllerLayoutGuide type="bottom" id="den-Vj-NDa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6PJ-Mk-xxv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to search for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIz-HP-lDw">
+                                <rect key="frame" x="16" y="70" width="343" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your words will go here when you start speaking..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bib-xj-uaZ">
+                                <rect key="frame" x="43" y="392" width="291" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUG-Mz-z5g">
+                                <rect key="frame" x="17" y="136" width="342" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mic"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Po9-nA-6xh" eventType="touchUpInside" id="YiN-AW-quJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press the mic before you start speaking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCN-Aq-5lo">
+                                <rect key="frame" x="17" y="352" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-yy-Eeg">
+                                <rect key="frame" x="133" y="565" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Next Page">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYi-TS-HTn" kind="show" identifier="Results" id="47B-sz-ytv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="eIz-HP-lDw" id="5jk-aT-Uue"/>
+                        <outlet property="label2" destination="yCN-Aq-5lo" id="BwH-6x-lSA"/>
+                        <outlet property="nextPage" destination="P5M-yy-Eeg" id="4ce-aF-NX2"/>
+                        <outlet property="textview" destination="Bib-xj-uaZ" id="O0v-LD-7S9"/>
+                        <outlet property="voiceButton" destination="GUG-Mz-z5g" id="cRE-7L-YWT"/>
+                        <outlet property="voiceCommandView" destination="6PJ-Mk-xxv" id="PSt-9I-WOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfI-bl-MlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="842"/>
+        </scene>
+        <!--Results Table View Controller-->
+        <scene sceneID="CYm-aF-ac9">
+            <objects>
+                <tableViewController id="UYi-TS-HTn" customClass="ResultsTableViewController" customModule="VENUE" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="E0w-mW-jLY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsTableViewCell" id="E7g-xf-5vH" customClass="ResultsTableViewCell" customModule="VENUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E7g-xf-5vH" id="NeE-Wk-jYY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turn lights on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDj-yd-Eao">
+                                            <rect key="frame" x="27" y="0.0" width="184" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="tableLabel" destination="yDj-yd-Eao" id="BaS-Oq-zeu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UYi-TS-HTn" id="fom-WT-fQk"/>
+                            <outlet property="delegate" destination="UYi-TS-HTn" id="19F-dd-zeC"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToMain" id="k2K-aB-CfN"/>
+                        <segue destination="831-1a-3xO" kind="show" identifier="toSettings" id="bHd-zY-4bo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6i-KB-XBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="842"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_voice_cmd" width="90" height="150"/>
@@ -264,6 +382,7 @@
         <image name="icon_cabin_control" width="90" height="90"/>
         <image name="icon_flight_info" width="90" height="90"/>
         <image name="icon_media_client" width="90" height="90"/>
+        <image name="mic" width="181" height="155"/>
         <image name="preset_bluray" width="120" height="120"/>
         <image name="preset_cabin_sleep" width="120" height="120"/>
         <image name="preset_cabin_wake" width="120" height="120"/>
@@ -277,5 +396,9 @@
         <image name="settings_about" width="120" height="120"/>
         <image name="settings_app_preferences" width="120" height="120"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="k2K-aB-CfN"/>
+        <segue reference="bHd-zY-4bo"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.30627735287533014" green="0.31513115284974091" blue="0.30501301964974131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
